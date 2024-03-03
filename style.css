@@ -171,11 +171,11 @@ ul {
   grid-area: content-main;
   background-color: var(--main-content-bg-color);
   display: grid;
-  grid-area: 1fr 1fr / 4fr 1fr;
-  grid-template-areas: 
+  grid-area: 1fr 1fr / 1fr 0.8fr;
+  /* grid-template-areas:
   "projects announcements"
   "projects trending"
-  ;
+  ; */
   gap: 20px;
   padding: 20px 30px;
 }
@@ -185,6 +185,7 @@ ul {
   border-radius: 8px;
   border-left: 5px solid var(--card-border-left);
   padding: 20px;
+  height: 150px;
 }
 
 .card-title {
@@ -227,30 +228,37 @@ ul {
 /* Announcements start */
 
 .announcements {
-  grid-area: announcements;
+
+  grid-row: 1;
   justify-self: end;
-  
+
+
 }
-.announcements-conent {
-  height: 100%;
+.announcements-content {
+  padding: 30px;
+
 }
 .announce {
   width: 25ch;
 }
 .announce-text {
-  font-size: 10px;
+  font-size: 14px;
 }
 .announce-title {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
+
+
 /* Announcements end */
 
 /* Trending start */
 
 .trending {
-  grid-area: trending;
+
+  grid-row: 2;
   justify-self: end;
+  width: 65%;
 }
 
 .trend .avatar {
@@ -259,7 +267,7 @@ ul {
 }
 
 .trending-info {
-  /* color: lightgray; */
+
   font-size: 12px;
 }
 
@@ -271,7 +279,7 @@ ul {
 
 .trending-content {
   padding: 20px;
-  width: max-content;
+  /* width: max-content; */
 }
 /* Trending end */
 
@@ -284,4 +292,10 @@ ul {
   border-radius: 8px;
   background-color: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.right {
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
