@@ -1,0 +1,40 @@
+/* Colors  */
+
+:root {
+
+}
+
+@font-face {
+    font-family: 'rooboto';
+    src: url(./ressources/fonts/roboto/Roboto-Regular.ttf);
+}
+
+body {
+    font-family: 'roboto',sans-serif;
+}
+
+/* Design */
+
+.container {
+    display: grid;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.header {
+    grid-area: header;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
