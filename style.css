@@ -76,6 +76,8 @@ ul {
 
 .header {
   grid-area: header;
+  /* display: grid;
+  grid-template-rows: 1fr 1fr; */
 }
 
 .content-main {
@@ -90,3 +92,4 @@ ul {
 .trending {
   grid-area: trending;
 }
+
