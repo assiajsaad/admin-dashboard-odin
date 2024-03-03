@@ -29,8 +29,8 @@ body {
   grid-template: 1fr 3fr 3fr / 1fr 3fr 1fr;
   grid-template-areas:
     "sidebar header header"
-    "sidebar content-main announcements"
-    "sidebar content-main trending";
+    "sidebar content-main content-main"
+    "sidebar content-main content-main";
 }
 
 .mat-icon {
@@ -170,6 +170,14 @@ ul {
 .content-main {
   grid-area: content-main;
   background-color: var(--main-content-bg-color);
+  display: grid;
+  grid-area: 1fr 1fr / 1fr 1fr 1fr;
+  grid-template-areas: 
+  "projects projects announcements"
+  "projects projects trending"
+  ;
+  gap: 20px;
+  padding: 20px 30px;
 }
 
 /* Content-main end */
@@ -178,6 +186,7 @@ ul {
 
 .announcements {
   grid-area: announcements;
+ 
 }
 
 /* Announcements end */
@@ -187,4 +196,24 @@ ul {
 .trending {
   grid-area: trending;
 }
+
+.trend .avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.trending-info {
+  color: lightgray;
+}
+
+.trend{
+  display: flex;
+  /* flex-direction: column; */
+}
 /* Trending end */
+
+
+.trending-content, .announcements-content {
+  border-radius: 8px;
+  background-color: white;
+}
